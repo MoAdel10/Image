@@ -34,7 +34,7 @@ pip install numpy Pillow matplotlib
 
 ### ColorImage
 ```
-from color_image import ColorImage
+from Image import ColorImage
 
 
 # Initialize the ColorImage class
@@ -60,7 +60,7 @@ color_image.draw_histogram(images=[equalized_image], show_image=True)
 ```
 ### GrayImage
 ```
-from gray_image import GrayImage
+from Image import GrayImage
 
 # Initialize the GrayImage class
 gray_image = GrayImage("path/to/gray_image.jpg", width=10, height=5, title="Gray Image Example")  // all optional except paths which is the first argument
