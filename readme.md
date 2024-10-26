@@ -30,58 +30,7 @@ pip install numpy Pillow matplotlib
 - Pillow
 - matplotlib
 
-## Classes
 
-### ColorImage
-```
-from Image import ColorImage
-
-
-# Initialize the ColorImage class
-color_image = ColorImage("path/to/color_image.jpg", width=10, height=5, title="Color Image Example") // all optional except paths which is the first argument
-
-# Load the original image
-original_image = color_image.get_image()
-print("Original Image Shape:", original_image.shape)
-
-# Equalize the image
-equalized_image = color_image.equalize_image()
-print("Equalized Image Shape:", equalized_image.shape)
-
-# Cancel the red color channel
-canceled_red = color_image.cancel_color_channel(['red'])
-color_image.draw_images(images=[original_image, canceled_red])
-
-# Draw histograms for the original image
-color_image.draw_histogram(images=[original_image], show_image=True)
-
-# Draw histograms for the equalized image
-color_image.draw_histogram(images=[equalized_image], show_image=True)
-```
-### GrayImage
-```
-from Image import GrayImage
-
-# Initialize the GrayImage class
-gray_image = GrayImage("path/to/gray_image.jpg", width=10, height=5, title="Gray Image Example")  // all optional except paths which is the first argument
-
-# Load the original grayscale image
-original_gray_image = gray_image.get_image()
-print("Original Grayscale Image Shape:", original_gray_image.shape)
-
-# Equalize the grayscale image
-equalized_gray_image = gray_image.equalize_image()
-print("Equalized Grayscale Image Shape:", equalized_gray_image.shape)
-
-# Draw histogram for the original grayscale image
-gray_image.draw_histogram(images=[original_gray_image], color="gray")
-
-# Draw histogram for the equalized grayscale image
-gray_image.draw_histogram(images=[equalized_gray_image], color="gray")
-
-# Draw images: original and equalized
-gray_image.draw_images(images=[original_gray_image, equalized_gray_image])
-```
 
 ## Usage Examples
 ### Example for ColorImage
